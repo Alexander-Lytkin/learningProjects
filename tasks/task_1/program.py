@@ -4,5 +4,8 @@
 """
 
 
-def func(name):
-    pass
+def func(name=None):
+    if name:
+        return f"Hello, {name}!"
+    else:
+        return"Hello, World!"
