@@ -5,4 +5,8 @@
 
 
 def func(int_list, n):
-    pass
+    result = []
+    for num in int_list:
+        if num > n:
+            result.append(num)
+    return result
