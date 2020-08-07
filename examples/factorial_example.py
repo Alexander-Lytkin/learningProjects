@@ -7,7 +7,7 @@ def factorial_1(num):
     if num == 1:
         return num
     else:
-        return num * factorial_1(num-1)
+        return num * factorial_1(num - 1)
 
 
 def factorial_2(num):

@@ -6,4 +6,7 @@
 ```bash
 pip install -r requirement.txt
 ```
-
+### Для подключения статического анализа кода выполнить:
+```bash
+pre-commit install
+```
