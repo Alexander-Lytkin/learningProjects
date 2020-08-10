@@ -10,4 +10,4 @@ from tasks.task_5.program import func
     ],
 )
 def test_func(d, result):
-    assert func(d) == result
+    assert tuple(func(d).items()) == tuple(result.items())
