@@ -5,4 +5,4 @@
 
 
 def func(str_1, str_2):
-    pass
+    return str_2.count(str_1)
