@@ -6,4 +6,5 @@
 
 
 def func(d):
-    pass
+    sorted_d = sorted(d.items(), key=lambda para: para[1])
+    return dict(sorted_d)
