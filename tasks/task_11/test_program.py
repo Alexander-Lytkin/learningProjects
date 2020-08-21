@@ -3,7 +3,7 @@ from tasks.task_11.program import func
 
 
 @pytest.mark.parametrize(
-    "l,result",
+    "lst,result",
     [
         ([], []),
         ([1, 1], []),
@@ -11,5 +11,5 @@ from tasks.task_11.program import func
         (["a", 1, 2, "1", "a", "ab", 2], [1, "1", "ab"]),
     ],
 )
-def test_func(l, result):
-    assert func(l) == result
+def test_func(lst, result):
+    assert func(lst) == result

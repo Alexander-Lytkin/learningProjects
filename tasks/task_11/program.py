@@ -4,5 +4,5 @@
 """
 
 
-def func(l):
+def func(lst):
     pass
