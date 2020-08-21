@@ -8,4 +8,4 @@ def func(name=None):
     if name:
         return f"Hello, {name}!"
     else:
-        return"Hello, World!"
+        return "Hello, World!"
