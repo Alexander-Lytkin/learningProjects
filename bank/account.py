@@ -20,19 +20,49 @@
 
 class Account:
     def __init__(self):
-        pass
+        self._balance = 0
+        self._is_opened = False
+
+    @property
+    def is_opened(self):
+        return self._is_opened
 
     def get_balance(self):
-        pass
+        self._check_opened()
+        return self._balance
 
     def open(self):
-        pass
+        self._check_if_account_is_already_opened()
+        self._is_opened = True
 
     def deposit(self, amount):
-        pass
+        self._check_opened()
+        self._check_amount_more_than_zero(amount)
+        self._balance += amount
 
     def withdraw(self, amount):
-        pass
+        self._check_opened()
+        self._check_amount_more_than_zero(amount)
+        self._check_balance_before_withdraw(amount)
+        self._balance -= amount
 
     def close(self):
-        pass
+        self._check_opened()
+        self._is_opened = False
+
+    def _check_opened(self):
+        if not self._is_opened:
+            raise ValueError("Для операции счёт должен быть открыт")
+
+    @staticmethod
+    def _check_amount_more_than_zero(amount):
+        if amount < 0:
+            raise ValueError("Нельзя ввести отрицательное значение")
+
+    def _check_balance_before_withdraw(self, amount):
+        if amount > self._balance:
+            raise ValueError("Недостаточно средств для списания")
+
+    def _check_if_account_is_already_opened(self):
+        if self._is_opened:
+            raise ValueError("Счет уже открыт")
