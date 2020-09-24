@@ -84,7 +84,7 @@ class Board:
         used_cell = 1
         for cell in self._board:
             if cell != " ":
-                used_cell += 2
+                used_cell += 1
         if used_cell == 10:
             return True
         else:
